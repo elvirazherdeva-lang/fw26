@@ -98,8 +98,9 @@ h3 { font-size: clamp(28px, 3.6vw, 48px); }
 .card figcaption em { font-style: normal; color: var(--on-maroon-2); font-variant-numeric: tabular-nums; font-weight: 500; }
 
 /* bio */
-.bio { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(16px, 2.4vw, 32px); align-items: stretch; }
-.bio .ph { aspect-ratio: 4 / 5; }
+.bio { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(16px, 2.4vw, 32px); align-items: stretch; }
+.bio .ph { aspect-ratio: auto; width: 100%; height: 100%; min-height: clamp(380px, 42vw, 640px); }
+.bio .ph img { object-position: 50% 20%; }
 .bio .text { background: var(--blush); color: var(--ink); border-radius: var(--r-card); padding: clamp(22px, 2.6vw, 36px); display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .bio .text h2 { color: var(--ink); font-size: clamp(34px, 4vw, 58px); margin-bottom: 4px; }
 .bio .text { justify-content: center; }
@@ -190,6 +191,7 @@ h3 { font-size: clamp(28px, 3.6vw, 48px); }
 @media (max-width: 680px) {
   .nav { display: none; }
   .bio { grid-template-columns: 1fr; }
+  .bio .ph { min-height: 0; height: auto; aspect-ratio: 4 / 5; }
   .grid { grid-template-columns: 1fr; }
   .grid:not(.six) .sw:last-child:nth-child(odd) .chip { aspect-ratio: 16 / 10; }
   .wide { aspect-ratio: 4 / 3; }
